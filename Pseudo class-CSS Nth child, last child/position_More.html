@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        position: relative; /*  Absolute এর জন্য রেফারেন্স হিসেবে কাজ করে */
+        height: 200px;
+        background: lightgray;
+      }
+      .relative-box {
+        position: relative;
+        top: 20px;
+        left: 30px;
+        background: lightblue;
+      }
+      .absolute-box {
+        position: absolute;
+        top: 90px;
+        left: 50px;
+        background: lightgreen;
+      }
+      .test {
+        border: 2px solid green;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test"></div>
+    <div class="container">
+      <div class="relative-box">Relative Box</div>
+      <div class="absolute-box">Absolute Box</div>
+    </div>
+  </body>
+</html>

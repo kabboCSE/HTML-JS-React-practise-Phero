@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .ring {
+        position: relative;
+        top: -90px;
+      }
+
+      .boy {
+        position: relative;
+        z-index: 1;
+      }
+      .water {
+        position: relative;
+        top: -10px;
+        /* z-index: ; */
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Z index</h3>
+    <div class="swim-container">
+      <div class="box boy">
+        <img src="swim/boy.svg" alt="" />
+      </div>
+      <div class="box ring">
+        <img src="swim/ring.svg" alt="" />
+      </div>
+      <div class="box water"><img src="swim/water.svg" alt="" /></div>
+      <button onclick="Welcome()">Click to get discount!</button>
+    </div>
+
+    <script>
+      //   alert("Welcome !");
+      function Welcome() {
+        alert("Summer Discount code is : JOKSUM67");
+      }
+    </script>
+  </body>
+</html>
