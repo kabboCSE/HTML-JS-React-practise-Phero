@@ -1,0 +1,137 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfectly Aligned Glow</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li label {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 15px 20px;
+      cursor: pointer;
+      display: block;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li label:hover {
+      color: #ff4444;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    nav ul li::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        #ff0000 10%,
+        #ff4444 30%,
+        #ff6666 50%,
+        #ff4444 70%,
+        #ff0000 90%,
+        transparent 100%);
+      box-shadow:
+        0 0 15px #ff4444,
+        0 0 30px #ff4444,
+        0 0 45px #ff2222,
+        0 0 60px rgba(255, 68, 68, 0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      animation: pulse 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% {
+        filter: blur(1px);
+        opacity: 0.8;
+      }
+      100% {
+        filter: blur(2px);
+        opacity: 1;
+      }
+    }
+
+    /* Only show ::after for selected item */
+    #home:checked ~ nav ul li.home::after,
+    #blogs:checked ~ nav ul li.blogs::after,
+    #services:checked ~ nav ul li.services::after,
+    #contact:checked ~ nav ul li.contact::after,
+    #about:checked ~ nav ul li.about::after {
+      opacity: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav ul li label {
+        font-size: 16px;
+        padding: 10px 12px;
+      }
+
+      nav ul li::after {
+        width: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hidden radio inputs -->
+  <input type="radio" name="nav" id="home" checked>
+  <input type="radio" name="nav" id="blogs">
+  <input type="radio" name="nav" id="services">
+  <input type="radio" name="nav" id="contact">
+  <input type="radio" name="nav" id="about">
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li class="home"><label for="home">Home</label></li>
+      <li class="blogs"><label for="blogs">Blogs</label></li>
+      <li class="services"><label for="services">Services</label></li>
+      <li class="contact"><label for="contact">Contact</label></li>
+      <li class="about"><label for="about">About</label></li>
+    </ul>
+  </nav>
+</body>
+</html>

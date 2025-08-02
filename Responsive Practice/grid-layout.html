@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+
+        .container {
+            height: 600px;
+            width: 100%;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+            gap: 5px;
+        }
+
+        .left-item {
+            background-color: red;
+            height: 100%;
+        }
+
+        .right-item {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            height: 100%;
+            gap: 5px;
+        }
+
+        .first-row {
+            background-color: orange;
+        }
+
+        .row-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+
+        .row-item1 {
+            background-color: purple;
+        }
+
+        .row-item2 {
+            background-color: #1c2d33;
+            color: white;
+        }
+
+        /* Optional: Styling for clarity */
+        .left-item,
+        .first-row,
+        .row-item1,
+        .row-item2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="two-col">
+            <div class="left-item">1</div>
+            <div class="right-item">
+                <div class="first-row">2</div>
+                <div class="row-items">
+                    <div class="row-item1">3</div>
+                    <div class="row-item2">4</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
