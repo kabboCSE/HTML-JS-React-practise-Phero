@@ -6,11 +6,16 @@ for (let i = 0; i < fruits.length; i++) {
 }
   */
 
-//using while loop
 
+
+
+//using while loop
 let i = 0;
 while (i < fruits.length) {
   console.log(fruits[i]);
   i++;
 }
 console.log(fruits.length);
+
+
+

@@ -5,5 +5,5 @@ const computer = {
   ssd: "512gb",
 };
 
-//Get the key value of object
+//Get the property of object
 console.log(Object.keys(computer));

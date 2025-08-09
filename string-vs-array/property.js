@@ -17,6 +17,7 @@ console.log(person["fav places"]);
 person["fav places"] = ["Bali", "New York", "Singapur"];
 console.log(person);
 
+//Another Way
 const propName = "profession";
 person[propName] = "DevOps";
 
