@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <section class="relative z-0 min-h-screen w-full">
+    <div
+      class="absolute left-0 right-0 z-10 h-40 bg-gradient-to-r from-[#f3793c] to-[#f3793c]"
+    >
+      <div class="product_cart mx-auto w-[90%] py-[30px]">
+        <h3 class="m-0 pb-2 text-2xl font-bold leading-[50px] text-white">
+          Orders
+        </h3>
+      </div>
+    </div>
+    <div class="relative left-0 right-0 top-28 z-20">
+      <div class="mx-auto mb-8 w-[90%] rounded-md bg-white pb-8 pt-4 shadow-lg">
+        <div
+          dir="ltr"
+          class="relative overflow-hidden"
+          style="
+            position: relative;
+            --radix-scroll-area-corner-width: 0px;
+            --radix-scroll-area-corner-height: 0px;
+          "
+        >
+          <style>
+            [data-radix-scroll-area-viewport] {
+              scrollbar-width: none;
+              -ms-overflow-style: none;
+              -webkit-overflow-scrolling: touch;
+            }
+            [data-radix-scroll-area-viewport]::-webkit-scrollbar {
+              display: none;
+            }
+          </style>
+          <div
+            data-radix-scroll-area-viewport=""
+            class="h-full w-full rounded-[inherit] *:!block"
+            style="overflow: hidden scroll"
+          >
+            <div style="min-width: 100%; display: table">
+              <div class="mx-auto mt-4 w-[95%]">
+                <input
+                  class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                  placeholder="Search"
+                />
+              </div>
+              <div class="overflow-x-auto">
+                <div class="relative w-full overflow-auto">
+                  <table class="w-full caption-bottom text-sm max-w-[100%]">
+                    <thead class="[&amp;_tr]:border-b">
+                      <tr
+                        class="border-b transition-colors data-[state=selected]:bg-muted items-center hover:bg-transparent"
+                      >
+                        <th
+                          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Name
+                        </th>
+                        <th
+                          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Create Date
+                        </th>
+                        <th
+                          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Customer name
+                        </th>
+                        <th
+                          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Customer Email
+                        </th>
+                        <th
+                          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Total
+                        </th>
+                        <th
+                          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Payment Status
+                        </th>
+                        <th
+                          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Order Status
+                        </th>
+                        <th
+                          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Third Party Order
+                        </th>
+                        <th
+                          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Third Party Order Tracking
+                        </th>
+                        <th
+                          class="h-12 px-4 align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          Actions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="[&amp;_tr:last-child]:border-0">
+                      <tr
+                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted cursor-pointer font-medium text-slate-900"
+                      >
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <a
+                            target="_blank"
+                            href="https://admin.shopify.com/store/kabbo-store-test/orders/6396858007750"
+                            class="underline hover:text-gray-400"
+                            rel="noreferrer"
+                            >#1040</a
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          August 31, 2025 9:53 AM
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Noel Simmons
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          weluvucyn@mailinator.com
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <p>BDT 32.76</p>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 h-auto"
+                        >
+                          <span
+                            class="rounded-full bg-green-200 px-4 py-2 text-sm text-slate-900"
+                            >paid</span
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Unfulfilled
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Order
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Tracking
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Items
+                          </button>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted cursor-pointer font-medium text-slate-900"
+                      >
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <a
+                            target="_blank"
+                            href="https://admin.shopify.com/store/kabbo-store-test/orders/6392239489222"
+                            class="underline hover:text-gray-400"
+                            rel="noreferrer"
+                            >#1039</a
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          August 28, 2025 1:01 PM
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Noel Simmons
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          weluvucyn@mailinator.com
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <p>BDT 16.87</p>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 h-auto"
+                        >
+                          <span
+                            class="rounded-full bg-green-200 px-4 py-2 text-sm text-slate-900"
+                            >paid</span
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Unfulfilled
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Create Order
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Tracking
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Items
+                          </button>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted cursor-pointer font-medium text-slate-900"
+                      >
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <a
+                            target="_blank"
+                            href="https://admin.shopify.com/store/kabbo-store-test/orders/6392238670022"
+                            class="underline hover:text-gray-400"
+                            rel="noreferrer"
+                            >#1038</a
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          August 28, 2025 1:00 PM
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Noel Simmons
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          weluvucyn@mailinator.com
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <p>BDT 16.87</p>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 h-auto"
+                        >
+                          <span
+                            class="rounded-full bg-green-200 px-4 py-2 text-sm text-slate-900"
+                            >paid</span
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Unfulfilled
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Order
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Tracking
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Items
+                          </button>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted cursor-pointer font-medium text-slate-900"
+                      >
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <a
+                            target="_blank"
+                            href="https://admin.shopify.com/store/kabbo-store-test/orders/6392205312198"
+                            class="underline hover:text-gray-400"
+                            rel="noreferrer"
+                            >#1037</a
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          August 28, 2025 12:06 PM
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Noel Simmons
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          weluvucyn@mailinator.com
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <p>BDT 141.02</p>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 h-auto"
+                        >
+                          <span
+                            class="rounded-full bg-green-200 px-4 py-2 text-sm text-slate-900"
+                            >paid</span
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Unfulfilled
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Order
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Tracking
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Items
+                          </button>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted cursor-pointer font-medium text-slate-900"
+                      >
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <a
+                            target="_blank"
+                            href="https://admin.shopify.com/store/kabbo-store-test/orders/6392197120198"
+                            class="underline hover:text-gray-400"
+                            rel="noreferrer"
+                            >#1036</a
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          August 28, 2025 12:00 PM
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Noel Simmons
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          weluvucyn@mailinator.com
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <p>BDT 141.02</p>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 h-auto"
+                        >
+                          <span
+                            class="rounded-full bg-green-200 px-4 py-2 text-sm text-slate-900"
+                            >paid</span
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Unfulfilled
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Order
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Tracking
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Items
+                          </button>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted cursor-pointer font-medium text-slate-900"
+                      >
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <a
+                            target="_blank"
+                            href="https://admin.shopify.com/store/kabbo-store-test/orders/6392183357638"
+                            class="underline hover:text-gray-400"
+                            rel="noreferrer"
+                            >#1035</a
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          August 28, 2025 11:38 AM
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Noel Simmons
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          weluvucyn@mailinator.com
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <p>BDT 23</p>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 h-auto"
+                        >
+                          <span
+                            class="rounded-full bg-green-200 px-4 py-2 text-sm text-slate-900"
+                            >paid</span
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Unfulfilled
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Order
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Tracking
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Items
+                          </button>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted cursor-pointer font-medium text-slate-900"
+                      >
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <a
+                            target="_blank"
+                            href="https://admin.shopify.com/store/kabbo-store-test/orders/6384888873158"
+                            class="underline hover:text-gray-400"
+                            rel="noreferrer"
+                            >#1034</a
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          August 26, 2025 12:47 PM
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Noel Simmons
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          weluvucyn@mailinator.com
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <p>BDT 36.8</p>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 h-auto"
+                        >
+                          <span
+                            class="rounded-full bg-green-200 px-4 py-2 text-sm text-slate-900"
+                            >paid</span
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Unfulfilled
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Order
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Tracking
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Items
+                          </button>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted cursor-pointer font-medium text-slate-900"
+                      >
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <a
+                            target="_blank"
+                            href="https://admin.shopify.com/store/kabbo-store-test/orders/6384703013062"
+                            class="underline hover:text-gray-400"
+                            rel="noreferrer"
+                            >#1033</a
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          August 26, 2025 12:31 PM
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Noel Simmons
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          weluvucyn@mailinator.com
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <p>BDT 30.16</p>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 h-auto"
+                        >
+                          <span
+                            class="rounded-full bg-green-200 px-4 py-2 text-sm text-slate-900"
+                            >paid</span
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Unfulfilled
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Order
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Tracking
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Items
+                          </button>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted cursor-pointer font-medium text-slate-900"
+                      >
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <a
+                            target="_blank"
+                            href="https://admin.shopify.com/store/kabbo-store-test/orders/6383505735878"
+                            class="underline hover:text-gray-400"
+                            rel="noreferrer"
+                            >#1032</a
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          August 26, 2025 11:05 AM
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Noel Simmons
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          weluvucyn@mailinator.com
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <p>BDT 167.74</p>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 h-auto"
+                        >
+                          <span
+                            class="rounded-full bg-green-200 px-4 py-2 text-sm text-slate-900"
+                            >paid</span
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Unfulfilled
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Order
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Tracking
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Items
+                          </button>
+                        </td>
+                      </tr>
+                      <tr
+                        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted cursor-pointer font-medium text-slate-900"
+                      >
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <a
+                            target="_blank"
+                            href="https://admin.shopify.com/store/kabbo-store-test/orders/6383490859206"
+                            class="underline hover:text-gray-400"
+                            rel="noreferrer"
+                            >#1031</a
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          August 26, 2025 11:03 AM
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          Noel Simmons
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          weluvucyn@mailinator.com
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <p>BDT 14.66</p>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 h-auto"
+                        >
+                          <span
+                            class="rounded-full bg-green-200 px-4 py-2 text-sm text-slate-900"
+                            >paid</span
+                          >
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Unfulfilled
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Create Order
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            Tracking
+                          </button>
+                        </td>
+                        <td
+                          class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center"
+                        >
+                          <button
+                            type="button"
+                            class="rounded-lg bg-purple-300 px-4 py-2 text-sm text-slate-900"
+                          >
+                            View Items
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div>
+                <nav
+                  role="navigation"
+                  aria-label="pagination"
+                  class="mx-auto flex w-full justify-center my-4"
+                >
+                  <ul class="flex flex-row items-center gap-1">
+                    <li class="cursor-pointer">
+                      <a
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-1 pl-2.5 pointer-events-none opacity-50"
+                        aria-label="Go to previous page"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-chevron-left h-4 w-4"
+                        >
+                          <path d="m15 18-6-6 6-6"></path>
+                        </svg>
+                        <span>Previous</span></a
+                      >
+                    </li>
+                    <li class="cursor-pointer">
+                      <a
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-1 pr-2.5"
+                        aria-label="Go to next page"
+                        ><span>Next</span
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-chevron-right h-4 w-4"
+                        >
+                          <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</html>
