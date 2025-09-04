@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Details Modal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "orange-primary": "#ff7849",
+              "orange-secondary": "#ff5722",
+              "orange-light": "#fff5f2",
+              "orange-lighter": "#ffeee8",
+            },
+            fontFamily: {
+              inter: [
+                "Inter",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "sans-serif",
+              ],
+            },
+            animation: {
+              "modal-in": "modalSlideIn 0.3s ease-out",
+              "modal-out": "modalSlideOut 0.3s ease-in forwards",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @keyframes modalSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px) scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @keyframes modalSlideOut {
+        from {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(-20px) scale(0.95);
+        }
+      }
+
+      .pattern-dots {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #ff7849;
+        border-radius: 10px;
+      }
+
+      .gradient-border::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #ff7849 0%, #ff9800 100%);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-indigo-500 to-purple-600 font-inter min-h-screen flex items-center justify-center p-5"
+  >
+    <!-- Modal Overlay -->
+    <div
+      class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 p-2 sm:p-4"
+    >
+      <!-- Modal -->
+      <div
+        class="bg-gradient-to-br from-white to-gray-50 rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl max-h-[95vh] sm:max-h-[90vh] relative overflow-hidden animate-modal-in"
+      >
+        <!-- Header -->
+        <div
+          class="bg-gradient-to-r from-orange-primary to-orange-secondary p-4 sm:p-6 lg:p-8 relative overflow-hidden pattern-dots"
+        >
+          <h2
+            class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold relative z-10 flex items-center gap-2 sm:gap-3 pr-12 sm:pr-16"
+          >
+            <div
+              class="w-6 h-6 sm:w-8 sm:h-8 bg-white bg-opacity-20 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0"
+            >
+              <svg
+                width="16"
+                height="16"
+                class="sm:w-5 sm:h-5"
+                fill="white"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"
+                />
+              </svg>
+            </div>
+            <span class="truncate">View Order Details</span>
+          </h2>
+
+          <!-- Close Button -->
+          <button
+            onclick="closeModal()"
+            class="absolute top-3 right-3 sm:top-4 sm:right-4 lg:top-5 lg:right-6 w-8 h-8 sm:w-10 sm:h-10 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg sm:rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-105 z-20"
+          >
+            <svg
+              width="16"
+              height="16"
+              class="sm:w-5 sm:h-5"
+              stroke="white"
+              stroke-width="2.5"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Content -->
+        <div
+          class="p-6 sm:p-8 overflow-y-auto custom-scrollbar"
+          style="max-height: calc(90vh - 120px)"
+        >
+          <!-- Order Status Card -->
+          <div
+            class="bg-gradient-to-br from-orange-light to-orange-lighter border-2 border-orange-primary rounded-2xl p-6 mb-6 relative overflow-hidden gradient-border"
+          >
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"
+            >
+              <div
+                class="flex flex-col gap-1 col-span-1 sm:col-span-2 lg:col-span-1"
+              >
+                <span
+                  class="text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >Order Status</span
+                >
+                <span
+                  class="text-xs sm:text-sm font-bold text-orange-secondary bg-orange-secondary bg-opacity-10 px-2 py-1 rounded-2xl inline-block break-all leading-tight"
+                  >WAIT_BUYER_ACCEPT_GOODS</span
+                >
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >Created At</span
+                >
+                <span class="text-sm font-bold text-gray-800"
+                  >2025-07-21 14:11:19</span
+                >
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >Logistics Status</span
+                >
+                <span class="text-sm font-bold text-gray-800"
+                  >SELLER_SEND_GOODS</span
+                >
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >Store</span
+                >
+                <a
+                  href="https://www.aliexpress.com/store/2089059"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm font-semibold text-orange-secondary hover:text-orange-600 transition-all duration-200 hover:-translate-y-0.5 relative group"
+                >
+                  RGeek Official Store
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-primary to-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"
+                  ></span>
+                </a>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >Total Amount</span
+                >
+                <span class="text-lg font-extrabold text-orange-secondary"
+                  >$10.64 USD</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Items Section -->
+          <h2
+            class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2"
+          >
+            <div
+              class="w-6 h-6 bg-gradient-to-r from-orange-primary to-orange-secondary rounded-lg flex items-center justify-center"
+            >
+              <svg width="16" height="16" fill="white" viewBox="0 0 24 24">
+                <path
+                  d="M19 7h-1V6a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h1v1a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-6a4 4 0 0 0-4-4zM6 14a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1H11a4 4 0 0 0-4 4v3H6zm15 3a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6z"
+                />
+              </svg>
+            </div>
+            Items
+          </h2>
+
+          <!-- Product Card -->
+          <div
+            class="bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden gradient-border product-card"
+          >
+            <!-- Product Name -->
+            <div
+              class="text-base font-bold text-gray-800 leading-relaxed mb-4 pb-4 border-b border-gray-200"
+            >
+              RGEEK V011 Pro Pcie Riser 011 Plus Cabo Riser Card Pci Express X16
+              10 Capacitors USB 3.0 Cable For GPU Graphics Card
+            </div>
+
+            <!-- Product Info Grid -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+            >
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >Product ID</span
+                >
+                <span class="text-sm font-semibold text-gray-800"
+                  >1005003618761298</span
+                >
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >SKU ID</span
+                >
+                <span class="text-sm font-semibold text-gray-800"
+                  >12000026520037797</span
+                >
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >Quantity</span
+                >
+                <span
+                  class="bg-gradient-to-r from-orange-primary to-orange-secondary text-white px-3 py-1 rounded-2xl text-sm font-semibold inline-block w-fit"
+                  >1</span
+                >
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >Product Price</span
+                >
+                <span class="text-lg font-extrabold text-orange-secondary"
+                  >$7.64</span
+                >
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >Shipping Fee</span
+                >
+                <span class="text-sm font-semibold text-gray-800">$3.00</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >Tax</span
+                >
+                <span class="text-sm font-semibold text-gray-800">$0.00</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >Total Fee</span
+                >
+                <span class="text-lg font-extrabold text-orange-secondary"
+                  >$10.64</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function closeModal() {
+        const modal = document.querySelector(".bg-gradient-to-br.from-white");
+        modal.classList.remove("animate-modal-in");
+        modal.classList.add("animate-modal-out");
+
+        setTimeout(() => {
+          console.log("Modal closed");
+          // In a real application, you would close the modal here
+        }, 300);
+      }
+
+      // Interactive effects
+      document.addEventListener("DOMContentLoaded", function () {
+        const productCard = document.querySelector(".product-card");
+
+        if (productCard) {
+          productCard.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-6px) scale(1.02)";
+          });
+
+          productCard.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
