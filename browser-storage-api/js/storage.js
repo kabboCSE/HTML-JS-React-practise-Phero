@@ -11,13 +11,19 @@ const getNumberfromLS = () => {
 
 // Have to use stringify for set object
 const setObjectTOLS = () => {
-  const customer = { name: "Shahriar", age: 28 };
+  localStorage.clear();
+  const customer = {
+    name: "Shahriar",
+    age: 28,
+    designation: "SQA",
+    roll: "QA",
+  };
   const customerJSON = JSON.stringify(customer);
   localStorage.setItem("customer", customerJSON);
 };
-
+// Have to use parse for get object
 const getObjectTOLS = () => {
-  const customer = { name: "Shahriar", age: 28 };
-  const customerJSON = JSON.parse(customer);
-  localStorage.setItem("customer", customerJSON);
+  const customerJSON = localStorage.getItem("customer");
+  const customer = JSON.parse(customerJSON);
+  console.log(customer.designation);
 };
