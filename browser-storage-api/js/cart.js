@@ -8,6 +8,18 @@ const addCart = () => {
 
   console.log("Product Added", productValue, quantityValue);
   displayCart(productValue, quantityValue);
+  addProductToCart(productValue, quantityValue);
+};
+
+const getCart = () => {
+  const cart = {};
+  return cart;
+};
+
+const addProductToCart = (productValue, quantityValue) => {
+  const cart = getCart();
+  cart[productValue] = quantityValue;
+  console.log("cart", cart);
 };
 
 const displayCart = (e1, e2) => {
