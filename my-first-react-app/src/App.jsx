@@ -1,35 +1,95 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Todo from "./Todo.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const time = 60;
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>React Core Concepts</h1>
+      <Todo task="learn React" isDone={true} time={time}></Todo>
+      <Todo task="learn JS"></Todo>
+      <Todo task="learn Vue" isDone={true} time={time}></Todo>
+      {/* <Student></Student>
+      <Student></Student>
+      <Person></Person>
+      <Developer name="Kabbo" tech="JS"></Developer>
+      <Developer name="tuhin" tech="qa"></Developer>
+      <Developer name="Anis" tech="JAVA"></Developer>
+      <Salami event="Eid Salami" amount="5000"></Salami>
+      <Salami event="Graduation"></Salami> */}
     </>
-  )
+  );
 }
 
-export default App
+function Salami({ event, amount = 0 }) {
+  return (
+    <div className="student">
+      <p>Salami For: {event} </p>
+      <p>Amount:{amount} </p>
+    </div>
+  );
+}
+
+function Student() {
+  return (
+    <div className="student">
+      <p>Name:</p>
+      <p>Dept:</p>
+    </div>
+  );
+}
+
+function Developer(props) {
+  return (
+    <div
+      style={{
+        color: "yellow",
+        fontWeight: "bold",
+        border: "3px solid blue",
+        borderRadius: "10px",
+        marginBottom: "10px",
+      }}
+    >
+      <h3>Developer: {props.name}</h3>
+      <p>Technology: {props.tech}</p>
+    </div>
+  );
+}
+
+function Person() {
+  const age = 28;
+  const person = "Kabbo";
+
+  const personStyle = {
+    color: "red",
+    border: "2px solid green",
+    padding: "10px",
+    borderRadius: "10px",
+  };
+
+  return (
+    <p style={personStyle}>
+      I am a person: {person} {age}
+    </p>
+  );
+}
+function Test() {
+  return (
+    <div>
+      <h1>This is Testing!</h1>
+    </div>
+  );
+}
+
+function Sports() {
+  return (
+    <div>
+      <Person></Person>
+      <h3>Cricket</h3>
+      <Test></Test>
+      <p>Playing and Loosing</p>
+    </div>
+  );
+}
+
+export default App;
