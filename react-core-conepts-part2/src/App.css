@@ -40,3 +40,6 @@
 .read-the-docs {
   color: #888;
 }
+.borderd {
+  border: 2px solid goldenrod;
+}
