@@ -20,7 +20,8 @@
 // console.log(person);
 
 //arrow function
-const sum = (...rest) => {
-  console.log(rest);
-};
-sum(1, 2, 3);
+// const sum = (...rest) => {
+//   console.log(rest);
+// };
+// sum(1, 2, 3);
+
