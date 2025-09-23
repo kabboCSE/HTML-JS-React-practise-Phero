@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import "./Country.css";
 
-const Country = ({ country }) => {
+const Country = ({ country, handleVisitedCountries }) => {
   const [visited, setVisited] = useState(false);
 
   const handleVisited = () => {
-    setVisited(true);
+    setVisited(!visited);
+    handleVisitedCountries(country);
+
+    //Ternary Operator
+    // setVisited(visited ? false : true);
   };
   return (
-    <div className="country">
+    <div className={`country ${visited && "country-visited"}`}>
       {/* Optional Chaining */}
       <img src={country?.flags?.flags?.png} alt={country.flags.flags.alt} />
       <h3>Name: {country.name.common}</h3>
